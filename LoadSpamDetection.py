@@ -2,7 +2,7 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 
 #Load Model
-model = joblib.load('D:\Programs\Python\Projects\spamDetection.pkl')
+model = joblib.load('spamDetection.pkl')
 
 #User Input
 num_link = int(input("Enter number of links: "))
@@ -22,4 +22,5 @@ prediction = model.predict(new_email_transform)
 if prediction == 0:
     print("Email is not spam")
 elif prediction == 1:
+
     print("Email is spam")
