@@ -46,12 +46,12 @@ The model uses the following 5 features for spam detection:
 
 Prepare your dataset as a CSV file named `spam_detection_dataset.csv` with the following columns:
 
-`num_link`: Number of links in the email
-`num_words`: Number of words in the email
-`has_offer`: Binary indicator (0 or 1) for offers
-`sender_score`: Sender reputation score (float)
-`all_caps`: Binary indicator (0 or 1) for all caps
-`is_spam`: Target variable (0 = not spam, 1 = spam)
+- `num_link`: Number of links in the email
+- `num_words`: Number of words in the email
+- `has_offer`: Binary indicator (0 or 1) for offers
+- `sender_score`: Sender reputation score (float)
+- `all_caps`: Binary indicator (0 or 1) for all caps
+- `is_spam`: Target variable (0 = not spam, 1 = spam)
 
 ## Training the Model
 
