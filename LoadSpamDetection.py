@@ -1,8 +1,9 @@
-from sklearn.preprocessing import StandardScaler
 import joblib
+import warnings
+warnings.filterwarnings('ignore')
 
 #Load Model
-model = joblib.load('spamDetection.pkl')
+model = joblib.load('D:\Programs\Python\Projects\spamDetection.pkl')
 
 #User Input
 num_link = int(input("Enter number of links: "))
@@ -13,14 +14,13 @@ all_caps = int(input("Enter all caps (0 or 1): "))
 
 new_email = [num_link, num_words, has_offer, sender_score, all_caps]
 
-scaler = StandardScaler()
-new_email_transform = scaler.fit_transform([new_email])
+scaler = joblib.load('D:\Programs\Python\Projects\spamDetectionScaler.pkl')
+new_email_transform = scaler.transform([new_email])
 
 #Prediction
 prediction = model.predict(new_email_transform)
 
-if prediction == 0:
+if prediction[0] == 0:
     print("Email is not spam")
-elif prediction == 1:
+elif prediction[0] == 1:
     print("Email is spam")
-
