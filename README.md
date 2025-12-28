@@ -98,6 +98,6 @@ The training script outputs:
 
 ## Dependencies
 
-`pandas`: Data manipulation and analysis
-`scikit-learn`: Machine learning algorithms and utilities
-`joblib`: Model serialization and persistence
+- `pandas`: Data manipulation and analysis
+- `scikit-learn`: Machine learning algorithms and utilities
+- `joblib`: Model serialization and persistence
