@@ -35,12 +35,12 @@ The model uses the following 5 features for spam detection:
 
 1. Clone the repository
 
-    git clone https://github.com/Nikk-hub-code/Spam-Detection.git
-    cd Spam-Detection
+       git clone https://github.com/Nikk-hub-code/Spam-Detection.git
+       cd Spam-Detection
 
 2. Install required packages
 
-    pip install pandas scikit-learn joblib
+       pip install pandas scikit-learn joblib
 
 ## Dataset Preparation
 
