@@ -3,7 +3,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 #Load Model
-model = joblib.load('D:\Programs\Python\Projects\spamDetection.pkl')
+model = joblib.load('spamDetection.pkl')
 
 #User Input
 num_link = int(input("Enter number of links: "))
@@ -14,7 +14,7 @@ all_caps = int(input("Enter all caps (0 or 1): "))
 
 new_email = [num_link, num_words, has_offer, sender_score, all_caps]
 
-scaler = joblib.load('D:\Programs\Python\Projects\spamDetectionScaler.pkl')
+scaler = joblib.load('spamDetectionScaler.pkl')
 new_email_transform = scaler.transform([new_email])
 
 #Prediction
@@ -24,3 +24,4 @@ if prediction[0] == 0:
     print("Email is not spam")
 elif prediction[0] == 1:
     print("Email is spam")
+
