@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 
 #Load dataset
-data = pd.read_csv("spam_detection_dataset.csv")
+data = pd.read_csv("D:\Programs\Python\Projects\spam_detection_dataset.csv")
 
 #Separate X and y
 X = data.drop('is_spam', axis=1)
@@ -33,3 +33,4 @@ print("Classification report :", classification_report(y_test, pred))
 
 #Save Model
 joblib.dump(model, 'spamDetection.pkl')
+joblib.dump(scaler, 'spamDetectionScaler.pkl')
