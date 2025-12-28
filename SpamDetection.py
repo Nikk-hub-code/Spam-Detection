@@ -32,5 +32,4 @@ print("Confusion Matrix: ", confusion_matrix(y_test, pred))
 print("Classification report :", classification_report(y_test, pred))
 
 #Save Model
-
 joblib.dump(model, 'spamDetection.pkl')
